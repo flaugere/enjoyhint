@@ -133,7 +133,7 @@ var EnjoyHint = function (_options) {
                 that.clear();
             }, 250);
 
-            $(document.body).scrollTo(step_data.selector, step_data.scrollAnimationSpeed || 250, {offset: -100});
+            $(document.body).scrollTo(step_data.selector,step_data.scrollAnimationSpeed||250,{offset:-100 + (step_data.scrollOffset ? step_data.scrollOffset : 0)});
 
             setTimeout(function () {
 
@@ -172,10 +172,6 @@ var EnjoyHint = function (_options) {
                 } else {
 
                     $body.enjoyhint('show_skip');
-                }
-
-                if (step_data.showSkip == true) {
-
                 }
 
                 if (step_data.nextButton) {
