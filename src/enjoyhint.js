@@ -192,6 +192,15 @@ var EnjoyHint = function (_options) {
                     that.skipUserClass = step_data.skipButton.className;
                 }
 
+                if (step_data.closeButton) {
+
+                    var $closeBtn = $('.enjoyhint_close_btn');
+
+                    $closeBtn.addClass(step_data.closeButton.className || "");
+                    $closeBtn.text(step_data.closeButton.text || "Close");
+                    that.closeUserClass = step_data.closeButton.className;
+                }
+
                 if (step_data.event_type) {
 
                     switch (step_data.event_type) {
