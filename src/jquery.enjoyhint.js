@@ -852,6 +852,9 @@ CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
 
                     }
 
+                    label_y = label_y + (data.labelOffsetY ? data.labelOffsetY : 0);
+                    label_x = label_x + (data.labelOffsetX ? data.labelOffsetX : 0);
+
                     var label_data = that.renderLabel({
                         x: label_x,
                         y: label_y,
