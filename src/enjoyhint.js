@@ -133,7 +133,7 @@ var EnjoyHint = function (_options) {
                 that.clear();
             }, 250);
 
-            $(document.body).scrollTo(step_data.selector, step_data.scrollAnimationSpeed || 250, {offset: -100});
+            $(document.body).scrollTo(step_data.selector,step_data.scrollAnimationSpeed||250,{offset:-100 + (step_data.scrollOffset ? step_data.scrollOffset : 0)});
 
             setTimeout(function () {
 
@@ -174,10 +174,6 @@ var EnjoyHint = function (_options) {
                     $body.enjoyhint('show_skip');
                 }
 
-                if (step_data.showSkip == true) {
-
-                }
-
                 if (step_data.nextButton) {
 
                     var $nextBtn = $('.enjoyhint_next_btn');
@@ -194,6 +190,15 @@ var EnjoyHint = function (_options) {
                     $skipBtn.addClass(step_data.skipButton.className || "");
                     $skipBtn.text(step_data.skipButton.text || "Skip");
                     that.skipUserClass = step_data.skipButton.className;
+                }
+
+                if (step_data.closeButton) {
+
+                    var $closeBtn = $('.enjoyhint_close_btn');
+
+                    $closeBtn.addClass(step_data.closeButton.className || "");
+                    $closeBtn.text(step_data.closeButton.text || "Close");
+                    that.closeUserClass = step_data.closeButton.className;
                 }
 
                 if (step_data.event_type) {
@@ -271,7 +276,9 @@ var EnjoyHint = function (_options) {
                     left: step_data.left,
                     right: step_data.right,
                     margin: step_data.margin,
-                    scroll: step_data.scroll
+                    scroll: step_data.scroll,
+                    labelOffsetY: step_data.labelOffsetY,
+                    labelOffsetX: step_data.labelOffsetX,
                 };
 
                 if (step_data.shape && step_data.shape == 'circle') {
