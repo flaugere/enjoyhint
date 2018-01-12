@@ -168,7 +168,6 @@ CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
                 that.$close_btn = $('<div>', {'class': that.cl.close_btn}).appendTo(that.enjoyhint).html('').click(function (e) {
 
                     that.hide();
-                    that.options.onSkipClick();
                 });
 
                 that.$canvas.mousedown(function (e) {

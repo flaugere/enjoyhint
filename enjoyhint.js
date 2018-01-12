@@ -589,7 +589,6 @@ var EnjoyHint = function (_options) {
                 that.$close_btn = $('<div>', {'class': that.cl.close_btn}).appendTo(that.enjoyhint).html('').click(function (e) {
 
                     that.hide();
-                    that.options.onSkipClick();
                 });
 
                 that.$canvas.mousedown(function (e) {
