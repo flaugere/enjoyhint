@@ -267,7 +267,9 @@ var EnjoyHint = function (_options) {
                     left: step_data.left,
                     right: step_data.right,
                     margin: step_data.margin,
-                    scroll: step_data.scroll
+                    scroll: step_data.scroll,
+                    labelOffsetY: step_data.labelOffsetY,
+                    labelOffsetX: step_data.labelOffsetX,
                 };
 
                 if (step_data.shape && step_data.shape == 'circle') {
