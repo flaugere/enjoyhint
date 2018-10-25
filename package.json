@@ -29,8 +29,10 @@
     "grunt-contrib-uglify": "^0.9.1"
   },
   "dependencies": {
+    "canvas": "^2.0.1",
     "grunt": "^0.4.5",
     "jquery.scrollto": "^2.1.2",
+    "jsdom": "^12.2.0",
     "kinetic": "^5.2.0"
   }
 }
